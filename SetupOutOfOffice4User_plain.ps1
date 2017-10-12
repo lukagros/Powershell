@@ -32,11 +32,9 @@ if ($TurnOffOnOOO -eq '1')
     else
         {
            Set-MailboxAutoReplyConfiguration $ForUser –AutoReplyState Disabled
-        }#ifUgsi
-#Set-MailboxAutoReplyConfiguration lgros@youremail.com –AutoReplyState Scheduled –StartTime “1/8/2013” –EndTime “1/15/2013” –ExternalMessage “Type External OOF message here” –InternalMessage “Type Internal OOF message here”
-
+        }
 
 remove-pssession -Name 'SetupAutomaticreply-Custom'
 }
 
-EnableDisableOutofOffice -TurnOffOnOOO '1' -ForUser 'tatjana.savic@uniqa.hr' -ScheduledOOO '0'  -DateBegin '21/11/2016 08:00' -DateEnd '05/09/2016 07:30' -InternalMessage $InternalMessage -externalMessage $externalMessage
+EnableDisableOutofOffice -TurnOffOnOOO '1' -ForUser 'user@domain.com' -ScheduledOOO '0'  -DateBegin '21/11/2016 08:00' -DateEnd '05/09/2016 07:30' -InternalMessage $InternalMessage -externalMessage $externalMessage
